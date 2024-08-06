@@ -30,7 +30,7 @@
     <parent>
         <groupId>net.microfalx</groupId>
         <artifactId>pom</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <name>JDBC Pool</name>
@@ -58,14 +58,14 @@
     <properties>
         <!-- Runtime -->
         <object.pool.version>1.0.0-SNAPSHOT</object.pool.version>
-        <logback.version>2.0.11</logback.version>
+        <slf4j.version>2.0.13</slf4j.version>
         <!-- Tests -->
-        <junit.version>5.10.1</junit.version>
-        <assertj.version>3.25.1</assertj.version>
+        <junit.version>5.10.3</junit.version>
+        <assertj.version>3.26.3</assertj.version>
         <mockito.version>5.9.0</mockito.version>
         <jmh.version>1.37</jmh.version>
-        <awaitility.version>4.2.0</awaitility.version>
-        <testcontainers.version>1.19.3</testcontainers.version>
+        <awaitility.version>4.2.1</awaitility.version>
+        <testcontainers.version>1.20.1</testcontainers.version>
     </properties>
 
     <developers>
@@ -79,6 +79,18 @@
         <dependencies>
 
             <!-- Runtime -->
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>net.microfalx</groupId>
