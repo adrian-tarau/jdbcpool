@@ -56,16 +56,8 @@
     <inceptionYear>2022</inceptionYear>
 
     <properties>
-        <!-- Runtime -->
+        <bom.version>1.0.0</bom.version>
         <object.pool.version>1.0.0-SNAPSHOT</object.pool.version>
-        <slf4j.version>2.0.13</slf4j.version>
-        <!-- Tests -->
-        <junit.version>5.10.3</junit.version>
-        <assertj.version>3.26.3</assertj.version>
-        <mockito.version>5.9.0</mockito.version>
-        <jmh.version>1.37</jmh.version>
-        <awaitility.version>4.2.1</awaitility.version>
-        <testcontainers.version>1.20.1</testcontainers.version>
     </properties>
 
     <developers>
@@ -78,18 +70,12 @@
     <dependencyManagement>
         <dependencies>
 
-            <!-- Runtime -->
-
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-simple</artifactId>
-                <version>${slf4j.version}</version>
+                <groupId>net.microfalx.bom</groupId>
+                <artifactId>bom-base</artifactId>
+                <version>1.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <dependency>
@@ -98,50 +84,6 @@
                 <version>${object.pool.version}</version>
             </dependency>
 
-            <!-- Tests -->
-            <dependency>
-                <groupId>org.junit</groupId>
-                <artifactId>junit-bom</artifactId>
-                <version>${junit.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.assertj</groupId>
-                <artifactId>assertj-core</artifactId>
-                <version>${assertj.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.testcontainers</groupId>
-                <artifactId>testcontainers</artifactId>
-                <version>${testcontainers.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.testcontainers</groupId>
-                <artifactId>junit-jupiter</artifactId>
-                <version>${testcontainers.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.awaitility</groupId>
-                <artifactId>awaitility</artifactId>
-                <version>${awaitility.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.openjdk.jmh</groupId>
-                <artifactId>jmh-core</artifactId>
-                <version>${jmh.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.openjdk.jmh</groupId>
-                <artifactId>jmh-generator-annprocess</artifactId>
-                <version>${jmh.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
